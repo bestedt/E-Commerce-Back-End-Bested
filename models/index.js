@@ -5,12 +5,12 @@ const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
 // Products belongsTo Category
-// since the product belongs to one category, i used the belongto maany method
+// since the product belongs to one category, i used the belongto  method
 Product.belongsTo(Category, {
   foreignKey: 'category_id',
 });
 // Categories have many Products
-// since the category can have multiple products, i used the belongto maany method
+// since the category can have multiple products, i used the has maany method
 Category.hasMany(Product, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE',
